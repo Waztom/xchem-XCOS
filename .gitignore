@@ -1,3 +1,6 @@
 *.sdf
 *.svg
+.idea/
+*.iml
+.ipynb_checkpoints/
 
