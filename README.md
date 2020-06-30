@@ -9,37 +9,46 @@ What followed was an amazing response from a very diverse community of organic c
 designs have been submitted with different approaches. Using the geometery and chemical features, the ground truth, of the fragment screening experiment - 
 a scoring method was needed to evaluate how much of this ground truth was retained in the compound designs (Fig. 1).
 
+<p align="center">
 <img src="images/xcos_readme_intro.png" width="324px">
-Figure 1: XX
-
-
-## Aim
+</p>
+Figure 1: Overview of the knowns and unknowns for evaluating the geometry and chemical features of the screening fragments used in a compound design   
 
 ## XCOS for evaluating compound designs
-
+XCOS is a simple scoring method that uses the [SuCOS](https://chemrxiv.org/articles/SuCOS_is_Better_than_RMSD_for_Evaluating_Fragment_Elaboration_and_Docking_Poses/8100203/1) scoring methodology. Designed compounds are broken into their component bits. Instead of measuring fragment overlay with a compound as is the case with SuCOS, 
+XCOS quantifies the overlay of compounds bits with the screening fragments. This way, the geometry and feature space overlay are accounted for when parts of a fragment 
+are used in a compound design. 
+    
 #### XCOS method summary
-
+In brief, XCOS follows the follwing steps:
  1. Break designed compound into bits at rotable bonds
- ![unconnected](images/xcos_step_1.png)
- Figure 2: Designed compound on the left is broken into bits at rotable bonds 
-   
- 3. Use a [SuCOS score](https://chemrxiv.org/articles/SuCOS_is_Better_than_RMSD_for_Evaluating_Fragment_Elaboration_and_Docking_Poses/8100203/1) these individual bits to all of the fragments
- 4. Capture best matching fragment with bit 
-![unconnected](images/xcos_step_2_3.png)
-Figure 3: Using the SuCOS score, each bit is scored for best overlay with the screening fragments. Fragment ID and the SuCOS score is in brackets underneath each best bit/fragment match
-5. Score - see Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
+<p align="center">
+<img src="images/xcos_step_1.png" width="324px">
+</p> 
+Figure 2: Step 1 of XCOS - designed compound on the left is broken into bits at rotable bonds   
+ 2. SuCOS score these individual bits to all of the screening fragments
+ 3. Capture best matching fragment with bit using highest score 
+<p align="center">
+<img src="images/xcos_step_2_3.png" width="324px">
+</p> 
+Figure 3: Step 2 and 3 - Each compound bit is scored for the best geometry and chemical feature overlay with the screening fragments. Fragment ID and the score is in brackets underneath each best bit/fragment match
+4. Final score - the scores from each bit needed some additional treatment. See Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
 
 #### Feature clustering summary
-Clustering of features was used to add an additional penalty paramter to the scoting function used - see > Score_2
+Clustering of features was used to add an additional penalty parameter to the scoring function used - see > Score_2
 
 In brief, clustering of features was achieved by:
 
  1. Grouping features by feature name and their respective x,y,z coordinates of all the screening fragments
- 3. Run nearest neighbors algorithm until all neighbors within a radius threshold are clustered together 
- 4. Get average value of xyz coords for each clustered feature 
+ 3. Run nearest neighbors algorithm until all neighbors within a radius threshold are clustered together (Fig. 4)
+ 4. Get average value of xyz coords for each clustered feature (Fig. 4) 
  4. Calculate total features  
- 
-![unconnected](images/feat_cluster_step_1.PNG)
+
+<p align="center">
+<img src="images/feat_cluster_step_1.PNG" height="324px">
+</p> 
+Figure 4: Overview of methodology used for clustering chemical features. (A) Find distances between edges of atoms (B) Cluster features that are within a distance threshold 
+(C) Calculate average of x,y and z coordinates for clustered feature and repeat from (A)  
 
 #### Scoring
 
