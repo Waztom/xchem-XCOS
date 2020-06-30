@@ -45,7 +45,7 @@ In brief, clustering of features was achieved by:
  4. Calculate total features  
 
 <p align="center">
-<img src="images/feat_cluster_step_1.PNG" width="324px">
+<img src="images/feat_cluster_step_1.PNG" width="500px">
 </p> 
 Figure 4: Overview of methodology used for clustering chemical features. (A) Find distances between edges of atoms (B) Cluster features that are within a distance threshold 
 (C) Calculate average of x,y and z coordinates for clustered feature and repeat from (A)  
