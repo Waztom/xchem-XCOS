@@ -20,20 +20,26 @@ Figure 1: XX
 #### XCOS method summary
 
  1. Break designed compound into bits at rotable bonds
- 2. Find total no of bit feats matching clustered frag feats with dist threshold
- 3. SuCOS score these individual bits to all of the fragments
+ ![unconnected](images/xcos_step_1.png)
+ Figure 2: Designed compound on the left is broken into bits at rotable bonds 
+   
+ 3. Use a [SuCOS score](https://chemrxiv.org/articles/SuCOS_is_Better_than_RMSD_for_Evaluating_Fragment_Elaboration_and_Docking_Poses/8100203/1) these individual bits to all of the fragments
  4. Capture best matching fragment with bit 
-
-![unconnected](images/xcos_step_1.png)
-
 ![unconnected](images/xcos_step_2_3.png)
+Figure 3: Using the SuCOS score, each bit is scored for best overlay with the screening fragments. Fragment ID and the SuCOS score is in brackets underneath each best bit/fragment match
+5. Score - see Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
 
 #### Feature clustering summary
+Clustering of features was used to add an additional penalty paramter to the scoting function used - see > Score_2
 
- 1. Get all feats of all frags (feat_name, xyz coords)
- 2. Group same features
- 3. Nearest neighbors algorithim run until all neighbors within radius thresh are aggregated together. Average value of xyz coords used for clusters. 
- 4. Calculate total features – assume each feature is equally important 
+In brief, clustering of features was achieved by:
+
+ 1. Grouping features by feature name and their respective x,y,z coordinates of all the screening fragments
+ 3. Run nearest neighbors algorithm until all neighbors within a radius threshold are clustered together 
+ 4. Get average value of xyz coords for each clustered feature 
+ 4. Calculate total features  
+ 
+![unconnected](images/feat_cluster_step_1.PNG)
 
 #### Scoring
 
