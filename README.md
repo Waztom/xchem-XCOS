@@ -10,7 +10,7 @@ designs have been submitted with different approaches. Using the geometery and c
 a scoring method was needed to evaluate how much of this ground truth was retained in the compound designs (Fig. 1).
 
 <p align="center">
-<img src="images/xcos_readme_intro.png" width="324px">
+<img src="images/xcos_readme_intro.png" width="400px">
 </p>
 Figure 1: Overview of the knowns and unknowns for evaluating the geometry and chemical features of the screening fragments used in a compound design   
 
@@ -23,13 +23,13 @@ are used in a compound design.
 In brief, XCOS follows the follwing steps:
  1. Break designed compound into bits at rotable bonds
 <p align="center">
-<img src="images/xcos_step_1.png" width="324px">
+<img src="images/xcos_step_1.png" width="400px">
 </p> 
 Figure 2: Step 1 of XCOS - designed compound on the left is broken into bits at rotable bonds   
  2. SuCOS score these individual bits to all of the screening fragments
  3. Capture best matching fragment with bit using highest score 
 <p align="center">
-<img src="images/xcos_step_2_3.png" width="324px">
+<img src="images/xcos_step_2_3.png" width="400px">
 </p> 
 Figure 3: Step 2 and 3 - Each compound bit is scored for the best geometry and chemical feature overlay with the screening fragments. Fragment ID and the score is in brackets underneath each best bit/fragment match
 4. Final score - the scores from each bit needed some additional treatment. See Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
@@ -45,7 +45,7 @@ In brief, clustering of features was achieved by:
  4. Calculate total features  
 
 <p align="center">
-<img src="images/feat_cluster_step_1.PNG" width="500px">
+<img src="images/feat_cluster_step_1.PNG" width="600px">
 </p> 
 Figure 4: Overview of methodology used for clustering chemical features. (A) Find distances between edges of atoms (B) Cluster features that are within a distance threshold 
 (C) Calculate average of x,y and z coordinates for clustered feature and repeat from (A)  
