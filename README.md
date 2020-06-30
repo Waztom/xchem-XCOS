@@ -9,7 +9,7 @@ What followed was an amazing response from a very diverse community of organic c
 designs have been submitted with different approaches. Using the geometery and chemical features, the ground truth, of the fragment screening experiment - 
 a scoring method was needed to evaluate how much of this ground truth was retained in the compound designs (Fig. 1).
 
-![unconnected](images/xcos_readme_intro.png)
+<img src="images/xcos_readme_intro.png" width="324px">
 Figure 1: XX
 
 
