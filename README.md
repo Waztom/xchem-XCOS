@@ -56,16 +56,15 @@ Figure 4: Overview of methodology used for clustering chemical features. (A) Fin
 (C) Calculate average of x,y and z coordinates for clustered feature and repeat from (A)  
 
 #### Scoring
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\sum" title="\sum" /></a>
 
-Score_1 = sum<sub>1</sub><sup>N</sup>(n<sub>b</sub> * S)
+Score_1 = <a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" title="\sum_{i=1}^{N}\left (n_{b} \times S \right )" /></a>
 
 where:
 - N is the total number of bits
 - n <sub>b</sub> is the number of heavy bit atoms
 - S is the SuCOS overlay score of the bit with the best fragment
 
-Score_2 = sum<sub>1</sub><sup>N</sup>(n<sub>b</sub> * S) * F
+Score_2 = <a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" title="\sum_{i=1}^{N}\left (n_{b} \times S \right ) * F" /></a>
 
 where:
 - F is fraction of the number of compounds features macthing the clustered features within a threshold devided by the total number of clustered features
