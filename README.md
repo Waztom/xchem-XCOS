@@ -57,6 +57,8 @@ Figure 4: Overview of methodology used for clustering chemical features. (A) Fin
 
 #### Scoring
 
+For all three scores - the greater the value, the more 'ground truth' of the fragments are used in the compound 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=score\_1&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?score\_1&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" title="score\_1 = \sum_{i=1}^{N}\left (n_{b} \times S \right )" /></a>
 
 where:
