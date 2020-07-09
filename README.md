@@ -56,6 +56,7 @@ Figure 4: Overview of methodology used for clustering chemical features. (A) Fin
 (C) Calculate average of x,y and z coordinates for clustered feature and repeat from (A)  
 
 #### Scoring
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sum" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\sum" title="\sum" /></a>
 
 Score_1 = sum<sub>1</sub><sup>N</sup>(n<sub>b</sub> * S)
 
