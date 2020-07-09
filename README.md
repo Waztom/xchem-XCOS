@@ -55,14 +55,14 @@ Figure 4: Overview of methodology used for clustering chemical features. (A) Fin
 Score_1 = sum<sub>1</sub><sup>N</sup>(n<sub>b</sub> * S)
 
 where:
-        - N is the total number of bits
-        - n <sub>b</sub> is the number of heavy bit atoms
-        - S is the SuCOS overlay score of the bit with the best fragment
+- N is the total number of bits
+- n <sub>b</sub> is the number of heavy bit atoms
+- S is the SuCOS overlay score of the bit with the best fragment
 
 Score_2 = sum<sub>1</sub><sup>N</sup>(n<sub>b</sub> * S) * F
 
 where:
-        - F is fraction of the number of compounds features macthing the clustered features within a threshold devided by the total number of clustered features
+- F is fraction of the number of compounds features macthing the clustered features within a threshold devided by the total number of clustered features
        
 
 
