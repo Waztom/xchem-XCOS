@@ -3,9 +3,9 @@
 ## Input datasets
 
 Viewing on [Fragalysis](https://fragalysis.diamond.ac.uk/viewer/react/preview/target/Mpro):
-1. WARRENTHOMPSON-XCOS-MATTEO - used [Matteos's permissive rescored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
+1. WARRENTHOMPSON-XCOS-MATTEO - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
 
-- You can view the best overlaying fragments determined by XCOS by clicking on the 'F' computed inspirations toggle in Fragalysis 
+- You can view the best overlaying fragments determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
 
 ## Background
 Using inspiration from the XChem [fragment screening experiment](https://www.diamond.ac.uk/covid-19/for-scientists/Main-protease-structure-and-XChem.html) at 
@@ -13,7 +13,7 @@ Diamond and a mass spectrometry screen of covalent fragments in the London Lab a
 was born and the global scientific community invited to submit compound designs to inhibit the action of SARS-CoV-2 main protease (Mpro). 
 
 What followed was an amazing response from a very diverse community of organic chemists, medicinal chemists and computational chemists. Thousands of compound 
-designs have been submitted with different approaches. Using the geometery and chemical features, the ground truth, of the fragment screening experiment - 
+designs have been submitted with different approaches. Using the geometry and chemical features, the ground truth, of the fragment screening experiment - 
 a scoring method was needed to evaluate how much of this ground truth was retained in the compound designs (Fig. 1).
 
 <p align="center">
@@ -27,7 +27,7 @@ XCOS quantifies the overlay of compounds bits with the screening fragments. This
 are used in a compound design. 
     
 #### XCOS method summary
-In brief, XCOS follows the follwing steps:
+In brief, XCOS follows the following steps:
  1. Break designed compound into bits at rotable bonds
 <p align="center">
 <img src="images/xcos_step_1.png" width="400px">
@@ -71,15 +71,10 @@ where:
 <a href="https://www.codecogs.com/eqnedit.php?latex=score\_2&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" target="_blank"><img src="https://latex.codecogs.com/svg.latex?score\_2&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" title="score\_2 = \sum_{i=1}^{N}\left (n_{b} \times S \right ) * F" /></a>
 
 where:
-- F is fraction of the number of compounds features matching the clustered features within a threshold devided by the total number of clustered fragment features (Score_3)
+- F is fraction of the number of compounds features matching the clustered features within a threshold divided by the total number of clustered fragment features (Score_3)
        
 <a href="https://www.codecogs.com/eqnedit.php?latex=Score\_3&space;=&space;\frac{n_{f}}{T_{f}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?Score\_3&space;=&space;\frac{n_{f}}{T_{f}}" title="Score\_3 = \frac{n_{f}}{T_{f}}" /></a>
 
 where:
 - n<sub>f</sub> is the number of compound features matching the clustered fragment features within a threshold
 - T<sub>F</sub> is the total number of clustered fragment features
-
-
-
-
-## 
