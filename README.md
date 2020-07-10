@@ -31,9 +31,9 @@ In brief, XCOS follows the following steps:
  1. Break designed compound into bits at rotable bonds
 <p align="center">
 <img src="images/xcos_step_1.png" width="400px">
+ <br> <br>
 </p> 
 Figure 2: Step 1 of XCOS - designed compound on the left is broken into bits at rotable bonds   
- <br>
  2. SuCOS score these individual bits to all of the screening fragments
  3. Capture best matching fragment with bit using highest score 
 
