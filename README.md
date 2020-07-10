@@ -77,7 +77,7 @@ where:
 where:
 - F is fraction of the number of compounds features matching the clustered features within a threshold divided by the total number of clustered fragment features (Score_3)
        
-<a href="https://www.codecogs.com/eqnedit.php?latex=Score\_3&space;=&space;\frac{n_{f}}{T_{f}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?Score\_3&space;=&space;\frac{n_{f}}{T_{f}}" title="Score\_3 = \frac{n_{f}}{T_{f}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=score\_3&space;=&space;\frac{n_{f}}{T_{f}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?score\_3&space;=&space;\frac{n_{f}}{T_{f}}" title="score\_3 = \frac{n_{f}}{T_{f}}" /></a>
 
 where:
 - n<sub>f</sub> is the number of compound features matching the clustered fragment features within a threshold
