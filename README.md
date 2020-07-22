@@ -5,6 +5,8 @@
 Viewing on [Fragalysis](https://fragalysis.diamond.ac.uk/viewer/react/preview/target/Mpro):
 1. WARRENTHOMPSON-XCOS-MATTEO - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
 
+2. WT-XCOS_THREE_HOP_HEAVYFEAT - used Tim Dudgeon's compounds enumerated using a three hop graph expansion and tethered docking poses. The Top 50 compounds were selected by using Score_2 (See scoring below) 
+
 - You can view the best overlaying fragments determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
 
 ## Background
