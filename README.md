@@ -9,7 +9,7 @@ Viewing on [Fragalysis](https://fragalysis.diamond.ac.uk/viewer/react/preview/ta
 
 3. WT-XCOS_THREE_HOP_HEAVYFEAT - used Tim Dudgeon's compounds enumerated using a three hop graph expansion and tethered docking poses. The Top 50 compounds were selected by using Score_2 (See scoring below) 
 
-- You can view the best overlaying fragments determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
+- You can view the best overlaying fragments (with an overlap score > 0.5) determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
 
 ## Background
 Using inspiration from the XChem [fragment screening experiment](https://www.diamond.ac.uk/covid-19/for-scientists/Main-protease-structure-and-XChem.html) at 
