@@ -3,7 +3,7 @@
 ## Input datasets
 
 Viewing on [Fragalysis](https://fragalysis.diamond.ac.uk/viewer/react/preview/target/Mpro):
-1. WT-XCOS2-MOONSHOT - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
+1. WT-XCOS2-TEO-MOONSHOT - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
 
 - You can view the best overlaying fragments (with an overlap score > 0.4) determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
 
