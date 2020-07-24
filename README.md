@@ -3,13 +3,9 @@
 ## Input datasets
 
 Viewing on [Fragalysis](https://fragalysis.diamond.ac.uk/viewer/react/preview/target/Mpro):
-1. WARRENTHOMPSON-XCOS-MATTEO - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
+1. WT-XCOS2-MOONSHOT - used [Matteos's permissive re-scored data](https://discuss.postera.ai/t/fragmenstein-assessing-fidelty-to-hits/1343/4) generated via [Fragmenstein method](https://github.com/matteoferla/Fragmenstein) as inputs for XCOS scoring
 
-2. WT-XCOS-THREEHOPALIGNED - used Tim Dudgeon's compounds enumerated using a three hop graph expansion and tethered docking poses. The Top 99 compounds were selected by using Score_1 (See scoring below) 
-
-3. WT-XCOS_THREE_HOP_HEAVYFEAT - used Tim Dudgeon's compounds enumerated using a three hop graph expansion and tethered docking poses. The Top 50 compounds were selected by using Score_2 (See scoring below) 
-
-- You can view the best overlaying fragments (with an overlap score > 0.5) determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
+- You can view the best overlaying fragments (with an overlap score > 0.4) determined by XCOS by clicking the 'F' computed inspirations toggle in Fragalysis 
 
 ## Background
 Using inspiration from the XChem [fragment screening experiment](https://www.diamond.ac.uk/covid-19/for-scientists/Main-protease-structure-and-XChem.html) at 
@@ -38,6 +34,8 @@ In brief, XCOS follows the following steps:
 </p> 
 Figure 2: Step 1 of XCOS - designed compound on the left is broken into bits at rotable bonds   
 <br/><br/>
+ 
+ 3. If the bit has an  maximum common substructure with the fragment then proceed to Step 2. Else, a score of 0 is given. 
  2. SuCOS score these individual bits to all of the screening fragments
  <br />
  3. Capture best matching fragment with bit using highest score 
@@ -67,7 +65,7 @@ Figure 4: Overview of methodology used for clustering chemical features. (A) Fin
 
 #### Scoring
 
-For all three scores - the greater the value, the more 'ground truth' of the fragments are used in the compound 
+The greater the value, the more 'ground truth' of the fragments are used in the compound 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=score\_1&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?score\_1&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)" title="score\_1 = \sum_{i=1}^{N}\left (n_{b} \times S \right )" /></a>
 
@@ -75,14 +73,3 @@ where:
 - N is the total number of bits
 - n <sub>b</sub> is the number of heavy bit atoms
 - S is the SuCOS overlay score of the bit with the best fragment
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=score\_2&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" target="_blank"><img src="https://latex.codecogs.com/svg.latex?score\_2&space;=&space;\sum_{i=1}^{N}\left&space;(n_{b}&space;\times&space;S&space;\right&space;)&space;*&space;F" title="score\_2 = \sum_{i=1}^{N}\left (n_{b} \times S \right ) * F" /></a>
-
-where:
-- F is fraction of the number of compounds features matching the clustered features within a threshold divided by the total number of clustered fragment features (Score_3)
-       
-<a href="https://www.codecogs.com/eqnedit.php?latex=score\_3&space;=&space;\frac{n_{f}}{T_{f}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?score\_3&space;=&space;\frac{n_{f}}{T_{f}}" title="score\_3 = \frac{n_{f}}{T_{f}}" /></a>
-
-where:
-- n<sub>f</sub> is the number of compound features matching the clustered fragment features within a threshold
-- T<sub>F</sub> is the total number of clustered fragment features
