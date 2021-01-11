@@ -35,17 +35,17 @@ In brief, XCOS follows the following steps:
 Figure 2: Step 1 of XCOS - designed compound on the left is broken into bits at rotable bonds   
 <br/><br/>
  
- 3. If the bit has an  maximum common substructure with the fragment then proceed to Step 2. Else, a score of 0 is given. 
- 2. SuCOS score these individual bits to all of the screening fragments
+ 2. If the bit has an  maximum common substructure with the fragment then proceed to Step 3. Else, a score of 0 is given. 
+ 3. SuCOS score these individual bits to all of the screening fragments
  <br />
- 3. Capture best matching fragment with bit using highest score 
+ 4. Capture best matching fragment with bit using highest score 
 <br/><br/>
 <p align="center">
 <img src="images/xcos_step_2_3.png" width="400px">
 </p> 
 Figure 3: Step 2 and 3 - Each compound bit is scored for the best geometry and chemical feature overlay with the screening fragments. Fragment ID and the score is in brackets underneath each best bit/fragment match
 <br/><br/>
-4. Final score - the scores from each bit needed some additional treatment. See Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
+5. Final score - the scores from each bit needed some additional treatment. See Scoring section below - using the SuCOS score for the overlay of bits with fragments, three scoring methods were used. 
 
 #### Feature clustering summary
 Clustering of features was used to add an additional penalty parameter to the scoring function used - see > Score_2
